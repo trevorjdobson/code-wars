@@ -1,10 +1,12 @@
+
 function formatWords(words){
+    var newStr = "";
+    if(words){
     for(var i = words.length - 1; i >= 0; i--) {
       if(words[i] === '') {
          words.splice(i, 1);
       }
   }
-    var newStr = "";
       if (words.length === 1) {
           newStr = words[0];
       } else if (words.length === 2) {
@@ -14,4 +16,8 @@ function formatWords(words){
       }
       console.log(newStr)
       return newStr;
+      }else {
+      newStr =''
+      return newStr;
+      }
   }
